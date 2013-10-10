@@ -17,14 +17,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-   // self.imgView.image = [UIImage imageNamed:LocalizedString(@"image")];
-	// Do any additional setup after loading the view, typically from a nib.
-    NSBundle *myBundle = LocalizationSetLanguage(@"en");
-
- //   self.imgView.image =  [UIImage imageWithContentsOfFile:[myBundle pathForResource:@"IMG" ofType:@"png"]];
-    self.imgView.image = [[LocalizeHelper sharedLocalSystem] setImageFromBundle:myBundle imageNameIs:@"bg"];
-    
-    
+    self.imgView.image = [[LocalizeHelper sharedLocalSystem] setImage:@"bg"];
 }
 
 - (void)didReceiveMemoryWarning

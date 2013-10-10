@@ -9,7 +9,7 @@
 
 #import <Foundation/Foundation.h>
 
-//extern static NSBundle* myBundle
+// extern static NSBundle* myBundle
 // some macros (optional, but makes life easy)
 
 // Use "LocalizedString(key)" the same way you would use "NSLocalizedString(key,comment)"
@@ -26,8 +26,8 @@
 // this gets the string localized:
 - (NSString*) localizedStringForKey:(NSString*) key;
 
-//set a new language:
+// set a new language:
 - (NSBundle *) setLanguage:(NSString*) lang;
-- (UIImage *)setImageFromBundle:(NSBundle *)bundle imageNameIs:(NSString *)imageString;
+- (UIImage *)setImage:(NSString *)imageString;
 
 @end

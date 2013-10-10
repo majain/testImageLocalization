@@ -14,6 +14,7 @@
 {
      
     // Override point for customization after application launch.
+    self.myBundle = LocalizationSetLanguage(@"es");
     return YES;
 }
 							

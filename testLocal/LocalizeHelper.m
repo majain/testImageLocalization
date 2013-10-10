@@ -7,6 +7,7 @@
 //
 
 #import "LocalizeHelper.h"
+#import "BAAppDelegate.h"
 
 // Singleton
 static LocalizeHelper* SingleLocalSystem = nil;
@@ -86,10 +87,12 @@ static NSBundle* myBundle = nil;
     return myBundle;
 }
 
-- (UIImage *)setImageFromBundle:(NSBundle *)bundle imageNameIs:(NSString *)imageString
+- (UIImage *)setImage:(NSString *)imageString
 {
     UIImage *image;
-    image = [UIImage imageWithContentsOfFile:[myBundle pathForResource:imageString ofType:@"png"]];
+    BAAppDelegate *appDelegate = (BAAppDelegate*)[[UIApplication sharedApplication] delegate];
+    NSBundle *selectedBundle = appDelegate.myBundle;
+    image = [UIImage imageWithContentsOfFile:[selectedBundle pathForResource:imageString ofType:@"png"]];
     
     if (!image) {
        image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:imageString ofType:@"png"]];

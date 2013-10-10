@@ -11,5 +11,6 @@
 @interface BAAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) NSBundle *myBundle;
 
 @end
